@@ -1,0 +1,25 @@
+{
+  "name": "tdd-js-udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha   tests/**/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sinon": "^14.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0"
+  }
+}
