@@ -1,0 +1,10 @@
+{
+    "extends": "airbnb-base",
+    "plugins": [
+        "import"
+    ],
+    "rules":{
+        "typeof": 0,
+        "no-undef": 0
+    }
+}
