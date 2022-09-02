@@ -35,4 +35,8 @@ describe('Main', () => {
     arr.pop(3); // 2
     expect(arr).to.have.length(2);
   });
+
+  it('should return true when pop 3 from the array', () => {
+    expect(arr.pop() === 3).to.be.equal(true);
+  });
 });
