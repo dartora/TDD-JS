@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha   tests/**/*.spec.js",
-    "test:tdd": "./node_modules/.bin/mocha   tests/**/*.spec.js --watch"
+    "test": "./node_modules/.bin/mocha   tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha   tests/**/*.spec.js --watch --require babel-register"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,8 @@
     "sinon": "^14.0.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.3.6",
     "eslint": "^8.23.0",
     "eslint-config-airbnb": "^19.0.4",

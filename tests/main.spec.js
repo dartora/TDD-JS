@@ -1,42 +1,55 @@
 /* eslint-disable no-undef */
-const { expect } = require('chai');
+import { expect } from 'chai';
 
-describe('Main', () => {
-  // hooks
-  let arr = [];
+import {
+  sum, sub, div, mult,
+} from '../src/main';
 
-  beforeEach(() => {
-    // roda tds vezes, antes do bloco
-    arr = [1, 2, 3];
+describe('Calc', () => {
+// smoke test
+
+  describe('Smoke tests', () => {
+    it('should exist the method sum', () => {
+      expect(sum).to.exist;
+      expect(sum).to.be.a('function');
+    });
+    it('should exist the method sub', () => {
+      expect(sub).to.exist;
+      expect(sub).to.be.a('function');
+    });
+    it('should exist the method div', () => {
+      expect(div).to.exist;
+      expect(div).to.be.a('function');
+    });
+    it('should exist the method mult', () => {
+      expect(mult).to.exist;
+      expect(mult).to.be.a('function');
+    });
   });
-
-  afterEach(() => {
-    // roda rds vezes, depois do bloco
+  describe('Sum', () => {
+    it('should return 4 when sum (2,2)', () => {
+      expect(sum(2, 2)).to.be.equal(4);
+    });
   });
-
-  // testar tipos ou se já foram criados (smoke test)
-  it('should be an array', () => {
-    expect(arr).to.be.an('array');
+  describe('Sub', () => {
+    it('should return -4 when sub (6,10)', () => {
+      expect(sub(6, 10)).to.be.equal(-4);
+    });
+    it('should return 4 when sub (6,2)', () => {
+      expect(sub(6, 2)).to.be.equal(4);
+    });
   });
-
-  it('should have a size of 4 when push another value to the array', () => {
-    // const arr = [1, 2, 3];
-    arr.push(4); // 4
-    expect(arr).to.have.lengthOf(4);
+  describe('Div', () => {
+    it('should return 4 when div (8,2)', () => {
+      expect(div(8, 2)).to.be.equal(4);
+    });
+    it('should return `impossible` when div (10,0)', () => {
+      expect(div(10, 0)).to.be.equal('impossible');
+    });
   });
-
-  it('should remove the value 3 when use pop in the array', () => {
-    arr.pop(); // true
-    expect(arr).to.not.include(3);
-  });
-
-  it('should have a size of 2 when pop a value to the array', () => {
-    // const arr = [1, 2, 3];
-    arr.pop(3); // 2
-    expect(arr).to.have.length(2);
-  });
-
-  it('should return true when pop 3 from the array', () => {
-    expect(arr.pop() === 3).to.be.equal(true);
+  describe('Mult', () => {
+    it('should return 4 when mult (2,2)', () => {
+      expect(mult(2, 2)).to.be.equal(4);
+    });
   });
 });
