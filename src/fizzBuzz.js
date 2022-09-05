@@ -11,9 +11,7 @@ const FizzBuzz = (value) => {
   }
   return value;
 };
-function foo() {
-  return 'kkkk';
-}
+const foo = () => 'kkkk';
 
 // return status === 0    ? 'default'    : status === 1      ? 'icon-1'      : 'icon-2';
-export default FizzBuzz;
+export { FizzBuzz, foo };

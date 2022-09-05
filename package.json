@@ -4,18 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint":"./node_modules/.bin/eslint src/*.js",
-    "prepush":"npm run lint && npm run test:coverage",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
     "test": "./node_modules/.bin/mocha   tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha   tests/**/*.spec.js --watch --require babel-register",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "reporter": ["text","html"],
-    "functions": 90,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "exclude":["tests/**"]
+    "exclude": [
+      "tests/**"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0"
   }

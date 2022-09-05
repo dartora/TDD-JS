@@ -7,7 +7,8 @@
     se n for Fizz nem Buzz retornar o numero
 */
 import { expect } from 'chai';
-import FizzBuzz from '../src/fizzBuzz';
+import { nonEnum } from 'sinon/lib/sinon/util/core/extend';
+import { FizzBuzz, foo } from '../src/fizzBuzz';
 
 describe('FizzBuzz', () => {
   it('should  return Fizz', () => {
@@ -27,5 +28,10 @@ describe('FizzBuzz', () => {
   });
   it('should return the zero', () => {
     expect(FizzBuzz(0)).to.be.equal(0);
+  });
+  it('should execute foo', () => {
+    expect(foo).to.exist;
+    expect(foo).to.be.a('function');
+    null;
   });
 });
