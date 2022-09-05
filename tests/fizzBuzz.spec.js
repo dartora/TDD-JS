@@ -25,4 +25,7 @@ describe('FizzBuzz', () => {
   it('should return the number', () => {
     expect(FizzBuzz(16)).to.be.equal(16);
   });
+  it('should return the zero', () => {
+    expect(FizzBuzz(0)).to.be.equal(0);
+  });
 });
