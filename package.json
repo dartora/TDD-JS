@@ -10,6 +10,10 @@
     "test:tdd": "./node_modules/.bin/mocha   tests/**/*.spec.js --watch --require babel-register",
     "test:coverage": "nyc npm test"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    },
   "nyc": {
     "reporter": [
       "text",
