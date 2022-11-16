@@ -7,7 +7,6 @@
     se n for Fizz nem Buzz retornar o numero
 */
 import { expect } from 'chai';
-import { nonEnum } from 'sinon/lib/sinon/util/core/extend';
 import { FizzBuzz, foo } from '../src/fizzBuzz';
 
 describe('FizzBuzz', () => {
