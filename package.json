@@ -4,27 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint":"./node_modules/.bin/eslint src/*.js",
-    "prepush":"npm run lint && npm run test:coverage",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
     "test": "./node_modules/.bin/mocha   tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha   tests/**/*.spec.js --watch --require babel-register",
     "test:coverage": "nyc npm test",
     "prepare": "husky install"
   },
-<<<<<<< HEAD
   "husky": {
     "hooks": {
       "pre-push": "npm run lint && npm run test:coverage"
     }
   },
-=======
->>>>>>> origin/Spotify
   "nyc": {
-    "reporter": ["text","html"],
+    "reporter": [
+      "text",
+      "html"
+    ],
     "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "exclude":["tests/**"]
+    "exclude": [
+      "tests/**"
+    ]
   },
   "author": "",
   "license": "ISC",
