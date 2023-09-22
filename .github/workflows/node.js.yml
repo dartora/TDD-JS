@@ -46,7 +46,7 @@ jobs:
     - run: npm test
 
 # Add a new job to run the same workflow on the "Spotify" branch
-  build_Spotify:
+  build_fizzBuzz:
     needs: build_calc   # This ensures that the "build_calc" job runs after the "build" job
     runs-on: ubuntu-latest
     strategy:
